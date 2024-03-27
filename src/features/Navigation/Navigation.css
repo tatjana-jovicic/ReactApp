@@ -1,0 +1,13 @@
+.navCSS {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+}

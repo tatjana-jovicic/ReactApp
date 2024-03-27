@@ -1,0 +1,16 @@
+.divCSS {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0px auto;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.dataMapDiv {
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid lightblue;
+    background-color: #0066b2;
+}
