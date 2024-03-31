@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const PostById = () => {
-  const { postId } = useParams(); //ZASTO OVO UVODIMO
+  const { postId } = useParams();
   const [post, setPost] = useState({});
 
   const fetchPostById = async () => {
@@ -19,7 +19,7 @@ const PostById = () => {
 
   useEffect(() => {
     fetchPostById();
-  }, [postId]); //ZASTO OVDJE IMA DEPENDENCY A KOD POSTS NEMA
+  }, [postId]);
 
   console.log(post, "POST");
 

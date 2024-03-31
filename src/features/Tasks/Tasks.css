@@ -1,0 +1,20 @@
+.tasksCss {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-row-gap: 24px;
+  grid-column-gap: 16px;
+  width: 50%;
+}
+.imgHeadCss {
+  width: 25px;
+  text-align: start;
+}
+.firstDiv {
+  display: flex;
+  align-items: center;
+}
+.taskStatusCss {
+  margin-left: 5px;
+  color: black;
+  font-weight: bold;
+}
