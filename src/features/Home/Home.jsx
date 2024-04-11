@@ -1,7 +1,9 @@
+
 import { useClicksStore } from "../../stores/clicks/clicks.store";
 
 const Home = () => {
   const { decrementNumberOfClicks } = useClicksStore();
+
   return (
     <>
       <h1>Home</h1>
@@ -10,6 +12,7 @@ const Home = () => {
       <button onClick={() => decrementNumberOfClicks()}>
         Remove click from Clicks
       </button>
+
     </>
   );
 };
