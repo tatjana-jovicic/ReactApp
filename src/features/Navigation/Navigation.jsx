@@ -11,7 +11,7 @@ const Navigation = () => {
       <Link to={{ pathname: "/users" }}>Users</Link>
       <Link to={{ pathname: "/tasks" }}>Tasks</Link>
       <Link to={{ pathname: "/clicks" }}>Clicks</Link>
-
+      <Link to={{ pathname: "/cart" }}>Cart</Link>
     </nav>
   );
 };
