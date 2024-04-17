@@ -10,6 +10,8 @@ import PostById from "./features/Posts/components/PostById";
 import Tasks from "./features/Tasks/Tasks";
 import Clicks from "./features/Clicks/Clicks";
 import Cart from "./features/Cart/Cart";
+import Items from "./features/Items/Items";
+import ItemsInCart from "./features/Items/components/ItemsInCart";
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/clicks" element={<Clicks />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/items" element={<Items />} />
+          <Route path="/orders" element={<ItemsInCart />} />
         </Routes>
       </BrowserRouter>
     </>

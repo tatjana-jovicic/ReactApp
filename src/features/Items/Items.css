@@ -1,0 +1,22 @@
+/* .item_list {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 3rem;
+  padding-left: auto;
+  display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+  grid-template-columns: repeat(5, 2fr);
+  gap: 20px;
+} */
+
+.item_list {
+  width: 100%;
+  max-width: 1300px;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 20px;
+}

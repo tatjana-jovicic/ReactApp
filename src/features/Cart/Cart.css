@@ -1,4 +1,4 @@
-.container {
+/* .container {
   margin-top: 4rem;
 }
 .button_container {
@@ -40,4 +40,33 @@
 }
 .item span {
   font-weight: bold;
+} */
+.listStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+.listStyle button {
+  width: 60px;
+  height: 40px;
+  font-size: small;
+  padding: 2px;
+}
+.listStyle li {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.divListStyle button {
+  color: #000000;
+  background-color: rgb(210, 241, 253);
+  border: 1px solid rgb(0, 0, 0);
+}
+.divListStyle button:hover {
+  color: #000000;
+  background-color: rgb(156, 228, 234);
+  border: 2px solid rgb(0, 0, 0);
 }
