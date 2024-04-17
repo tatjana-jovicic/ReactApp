@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Posts.css";
 import { useNavigate } from "react-router-dom";
-import { useAddItemToCart } from "../../stores/cart/cart.store"; //dodano
+import { useCartStore } from "../../stores/cart/cart.store";
 
 const Posts = () => {
-  const { addItemtoCart } = useAddItemToCart(); //dodano
+  const { addItemToCart } = useCartStore();
 
   const navigate = useNavigate();
   const [data, setData] = useState([]);
@@ -37,12 +37,12 @@ const Posts = () => {
     }
   };
 
-  const functionOfPosts = (post) => {
-    const dataPost = {
+  const handleAddToCart = (post) => {
+    const itemToAdd = {
       id: post.id,
       title: post.title,
     };
-    addItemtoCart(dataPost);
+    addItemToCart(itemToAdd);
   };
 
   return (
@@ -54,7 +54,7 @@ const Posts = () => {
           <button className="butt" onClick={() => deletePost(post.id)}>
             Delete post
           </button>
-          <button className="butt" onClick={() => functionOfPosts(post)}>
+          <button className="butt" onClick={() => handleAddToCart(post)}>
             Add to cart
           </button>
         </div>
