@@ -39,16 +39,16 @@
   padding: 0;
 }
 .item_description button {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(183, 181, 104);
   color: black;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid black;
 }
 .item_description button:hover {
-  background-color: rgb(116, 119, 120);
+  background-color: rgb(255, 255, 255);
   border: 1px solid black;
-  color: white;
+  color: rgb(0, 0, 0);
 }
