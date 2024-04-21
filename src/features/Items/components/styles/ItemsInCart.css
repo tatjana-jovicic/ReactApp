@@ -1,0 +1,49 @@
+.your_items {
+  padding-top: 2rem;
+}
+.lists_items {
+  display: grid;
+  gap: 20px;
+}
+.list_item {
+  background-color: rgb(190, 232, 241);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  width: 100%;
+  max-width: 150px;
+  margin: auto;
+}
+.title {
+  margin: auto;
+  font-weight: bold;
+}
+.price {
+  margin: auto;
+}
+
+.bin {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+.total_price {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 18px;
+}
+.butt1 {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: black;
+  background-color: rgb(183, 181, 104);
+}
+.butt1:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+}
