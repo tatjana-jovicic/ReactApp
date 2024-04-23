@@ -34,4 +34,20 @@ export const useOrderStore = create((set) => ({
       order: state.order.filter((item) => item.id !== itemId),
     })), // Remove the item from the cart array by filtering out the item with the given ID
   clearOrderCart: () => set({ order: [] }),
+
+  incrementNumberOfOrder: (itemId) =>
+    set((state) => ({
+      order: state.order.map((item) =>
+        item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+      ),
+    })),
+
+  decrementNumberOfOrder: (itemId) =>
+    set((state) => ({
+      order: state.order.map((item) =>
+        item.id === itemId
+          ? { ...item, quantity: Math.max(1, item.quantity - 1) }
+          : item
+      ),
+    })),
 }));
