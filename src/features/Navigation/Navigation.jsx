@@ -23,6 +23,7 @@ const Navigation = () => {
         <Link to={{ pathname: "/clicks" }}>Clicks</Link>
         <Link to={{ pathname: "/cart" }}>Cart</Link>
         <Link to={{ pathname: "/items" }}>Items</Link>
+        <Link to={{ pathname: "/pokemons" }}>Pokemons</Link>
       </div>
       <CartIcon />
     </div>

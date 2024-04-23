@@ -12,6 +12,7 @@ import Clicks from "./features/Clicks/Clicks";
 import Cart from "./features/Cart/Cart";
 import Items from "./features/Items/Items";
 import ItemsInCart from "./features/Items/components/ItemsInCart";
+import Pokemons from "./features/Pokemons/Pokemons";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/items" element={<Items />} />
           <Route path="/orders" element={<ItemsInCart />} />
+          <Route path="/pokemons" element={<Pokemons />} />
         </Routes>
       </BrowserRouter>
     </>
