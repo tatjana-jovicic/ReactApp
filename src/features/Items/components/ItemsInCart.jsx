@@ -1,13 +1,19 @@
 import "./styles/ItemsInCart.css";
 import { useOrderStore } from "../../../stores/order/order.store";
 import Bin from "../../../assets/bin.png";
-// import Plus from "../../../assets/plusSign.png";
-// import Minus from "../../../assets/minusSign.jpg";
+import Plus from "../../../assets/plusSign.png";
+import Minus from "../../../assets/minusSign.jpg";
 // import { useNavigate } from "react-router-dom";
 
 const ItemsInCart = () => {
   // const router = useNavigate();
-  const { order, removeItemFromOrderCart, clearOrderCart } = useOrderStore();
+  const {
+    order,
+    removeItemFromOrderCart,
+    clearOrderCart,
+    incrementNumberOfOrder,
+    decrementNumberOfOrder,
+  } = useOrderStore();
 
   const total = order.reduce(
     (acc, item) => acc + item.totalPrice * item.quantity,
@@ -39,9 +45,19 @@ const ItemsInCart = () => {
                 <div className="quantity">
                   <p>${itemTotalPrice(item)}</p>
                   <div>
-                    <span>- </span>
+                    <span
+                      className="decrement"
+                      onClick={() => decrementNumberOfOrder(item.id)}
+                    >
+                      -
+                    </span>
                     <span>{item.quantity}</span>
-                    <span> +</span>
+                    <span
+                      className="increment"
+                      onClick={() => incrementNumberOfOrder(item.id)}
+                    >
+                      +
+                    </span>
                   </div>
                 </div>
                 <img
