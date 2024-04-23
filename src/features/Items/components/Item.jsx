@@ -2,7 +2,7 @@ import { useOrderStore } from "../../../stores/order/order.store";
 import "./styles/Item.css";
 
 const Item = ({ item }) => {
-  const { addItemToCart, countPriceItems } = useOrderStore();
+  const { addItemToOrderCart } = useOrderStore();
 
   const handleAddItem = (item) => {
     const AddItem = {
@@ -11,7 +11,7 @@ const Item = ({ item }) => {
       title: item.title,
       price: item.price,
     };
-    addItemToCart(AddItem);
+    addItemToOrderCart(AddItem);
   };
 
   return (
