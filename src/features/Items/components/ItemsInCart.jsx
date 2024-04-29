@@ -42,14 +42,14 @@ const ItemsInCart = () => {
 
   const removeItem = (id) => {
     removeItemFromOrderCart(id);
-    setIsRemoved(true); //ovoooo
+    setIsRemoved(true);
   };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
-    setIsRemoved(true);
+    setIsRemoved(false);
   };
 
   return (
@@ -102,7 +102,7 @@ const ItemsInCart = () => {
       <Snackbar open={isRemoved} autoHideDuration={3000} onClose={handleClose}>
         <Alert
           onClose={handleClose}
-          severity="success"
+          severity="error"
           variant="filled"
           sx={{ width: "100%" }}
         >

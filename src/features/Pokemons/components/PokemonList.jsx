@@ -1,6 +1,6 @@
 import "../styles/Pokemon.css";
 
-const Pokemon = ({ pokemon }) => {
+const PokemonList = ({ pokemon }) => {
   return (
     <div className="pokemonStyle">
       <img src={pokemon.image} alt={pokemon.title} />
@@ -9,4 +9,4 @@ const Pokemon = ({ pokemon }) => {
     </div>
   );
 };
-export default Pokemon;
+export default PokemonList;
