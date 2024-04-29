@@ -50,6 +50,7 @@
 } */
 .title {
   font-size: 30px;
+  padding-top: 2rem;
 }
 .items_cart {
   display: flex;

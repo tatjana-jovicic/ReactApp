@@ -3,10 +3,15 @@ import { useOrderStore } from "../../../stores/order/order.store";
 import Bin from "../../../assets/bin.png";
 import Plus from "../../../assets/plusSign.png";
 import Minus from "../../../assets/minusSign.jpg";
-// import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Alert, Snackbar } from "@mui/material";
 
 const ItemsInCart = () => {
-  // const router = useNavigate();
+  const [isRemoved, setIsRemoved] = useState(false);
+  const [isSuccessOrder, setIsSuccessOrder] = useState(false);
+  const router = useNavigate();
+
   const {
     order,
     removeItemFromOrderCart,
@@ -16,20 +21,35 @@ const ItemsInCart = () => {
   } = useOrderStore();
 
   const total = order.reduce(
-    (acc, item) => acc + item.totalPrice * item.quantity,
+    (acc, item) => acc + item.price * item.quantity,
     0
   );
 
-  // const handleOrder = () => {
-  //   // Here you can implement the logic to send the order to the backend
-  //   // and clear the cart
-  //   clearOrderCart();
-  //   router("/items");
-  // };
+  const handleOrder = () => {
+    // Here you can implement the logic to send the order to the backend
+    // and clear the cart
+    clearOrderCart();
+    setIsSuccessOrder(true);
+    setTimeout(() => {
+      router("/items");
+    }, 3000);
+  };
 
   const itemTotalPrice = (item) => {
     const totalItemPrice = item.price * item.quantity;
     return totalItemPrice.toFixed(2); //js f-ja koja zaokruzi da dvije decimale
+  };
+
+  const removeItem = (id) => {
+    removeItemFromOrderCart(id);
+    setIsRemoved(true); //ovoooo
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setIsRemoved(true);
   };
 
   return (
@@ -61,7 +81,7 @@ const ItemsInCart = () => {
                   </div>
                 </div>
                 <img
-                  onClick={() => removeItemFromOrderCart(item.id)}
+                  onClick={() => removeItem(item.id)}
                   className="trash_bin"
                   src={Bin}
                   alt="Trash Bin Icon"
@@ -71,7 +91,7 @@ const ItemsInCart = () => {
             <p className="total_price">
               Total price for all items: ${total.toFixed(2)}
             </p>
-            <button className="order_button" onClick={() => clearOrderCart()}>
+            <button className="order_button" onClick={() => handleOrder()}>
               Order
             </button>
           </div>
@@ -79,32 +99,31 @@ const ItemsInCart = () => {
       ) : (
         <h2>No items in cart</h2>
       )}
+      <Snackbar open={isRemoved} autoHideDuration={3000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          Item deleted!
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={isSuccessOrder}
+        autoHideDuration={3000}
+        onClose={handleClose}
+      >
+        <Alert
+          onClose={handleClose}
+          severity="info"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          Order success!
+        </Alert>
+      </Snackbar>
     </div>
-
-    // <div>
-    //   <h2 className="your_items">Your items </h2>
-    //   <div className="lists_items">
-    //     {order.map((item) => (
-    //       <div className="list_item" key={item.id}>
-    //         <img className="image" src={item.image} alt={item.title} />
-    //         <span className="title">{item.title}</span>
-    //         <span className="price">${itemTotalPrice(item)}</span>
-
-    //         <img
-    //           src={Bin}
-    //           className="bin"
-    //           onClick={() => removeItemFromOrderCart(item.id)}
-    //         />
-    //       </div>
-    //     ))}
-    //   </div>
-    //   <p className="total_price">
-    //     Total price for all items: ${total.toFixed(2)}
-    //   </p>
-    //   <button className="butt1" onClick={() => clearOrderCart()}>
-    //     Clear order
-    //   </button>
-    // </div>
   );
 };
 export default ItemsInCart;
