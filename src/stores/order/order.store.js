@@ -38,16 +38,30 @@ export const useOrderStore = create((set) => ({
   incrementNumberOfOrder: (itemId) =>
     set((state) => ({
       order: state.order.map((item) =>
-        item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
-      ),
-    })),
-
-  decrementNumberOfOrder: (itemId) =>
-    set((state) => ({
-      order: state.order.map((item) =>
         item.id === itemId
-          ? { ...item, quantity: Math.max(1, item.quantity - 1) }
+          ? {
+              ...item,
+              quantity: item.quantity + 1,
+              totalPrice: item.price * (item.quantity + 1),
+            }
           : item
       ),
     })),
+  decrementNumberOfOrder: (itemId) =>
+    set((state) => ({
+      order: state.order.map((item) =>
+        item.id === itemId && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      ),
+    })),
+
+  // decrementNumberOfOrder: (itemId) =>
+  //   set((state) => ({
+  //     order: state.order.map((item) =>
+  //       item.id === itemId
+  //         ? { ...item, quantity: Math.max(1, item.quantity - 1) }
+  //         : item
+  //     ),
+  //   })),
 }));
