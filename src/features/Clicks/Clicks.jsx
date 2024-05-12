@@ -14,16 +14,26 @@ const Clicks = () => {
 
   return (
     <div>
-      <h2>Clicks</h2>
-      <button onClick={() => incrementNumberOfClicks()}>Add click</button>
-      <button onClick={() => resetClicksCount()}>Reset clicks</button>
+      <h2>CLICKS</h2>
+      <button className="button" onClick={() => incrementNumberOfClicks()}>
+        Add Click
+      </button>
+      <button className="button" onClick={() => resetClicksCount()}>
+        Reset Clicks
+      </button>
       <Click numberOfClicks={clicks} />
-      <button onClick={() => setNumberToAdd(numberToAdd + 1)}>
+      <button
+        className="button"
+        onClick={() => setNumberToAdd(numberToAdd + 1)}
+      >
         Number To Add
       </button>
       <h2>Number to add: {numberToAdd}</h2>
-      <button onClick={() => addMultiNumberToClick(numberToAdd)}>
-        Add number to global store clicks
+      <button
+        className="button"
+        onClick={() => addMultiNumberToClick(numberToAdd)}
+      >
+        Add Number To Global Store Clicks
       </button>
     </div>
   );

@@ -1,14 +1,13 @@
-
 const Work = () => {
-    return (
-        <>
-            <h1>Our work</h1>
-            <p>We did many great things.</p>
-            <p>Some are very known.</p>
-            <p>Some are yet to be seen.</p>
-            <p>Many will be remembered forever!</p>
-        </>
-    )
-}
+  return (
+    <>
+      <h1>My work</h1>
+      <p>I have done many great things.</p>
+      <p>Some are very known.</p>
+      <p>Some are yet to be seen.</p>
+      <p>Many will be remembered forever!</p>
+    </>
+  );
+};
 
-export default Work
+export default Work;

@@ -1,14 +1,3 @@
-/* .item {
-  background-color: rgb(184, 229, 238);
-  color: black;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.item img {
-  max-width: 300px;
-  aspect-ratio: 3/2;
-} */
 .item_item {
   background-color: rgb(184, 229, 238);
   color: black;

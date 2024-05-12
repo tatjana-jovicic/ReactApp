@@ -1,6 +1,5 @@
 import "./Pokemons.css";
 import PokemonList from "./components/PokemonList";
-// import { pokemons } from "../../data/pokemons";
 import { usePokemonStore } from "../../stores/pokemons/pokemon.store";
 
 const Pokemons = () => {
@@ -8,9 +7,9 @@ const Pokemons = () => {
 
   const loadVisible = pokemons.slice(0, visiblePokemons);
 
-  console.log(loadVisible, "loadVisible");
-  console.log(pokemons, "pokemons");
-  console.log(visiblePokemons, "visiblePokemons");
+  // console.log(loadVisible, "loadVisible");
+  // console.log(pokemons, "pokemons");
+  // console.log(visiblePokemons, "visiblePokemons");
 
   return (
     <>

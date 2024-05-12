@@ -1,26 +1,29 @@
 import { useState } from "react";
 import "./Tasks.css";
 import Task from "./components/Task";
+import ThreePoints from "../../assets/three-points.svg";
+import Clock from "../../assets/clock.png";
+import Clipboard from "../../assets/clipboard.png";
+import TaskIcon from "../../assets/tasks.png";
 
 const Tasks = () => {
   const [task, setTask] = useState([
     {
-      imgUrl: "https://www.svgrepo.com/show/476166/three-points.svg",
+      imgUrl: ThreePoints,
       heading: "Open",
       paragraph: "Tasks",
       numberTask: 223,
       color: "#F28500",
     },
     {
-      imgUrl: "https://cdn-icons-png.flaticon.com/512/118/118165.png",
+      imgUrl: Clock,
       heading: "Pending",
       paragraph: "Tasks",
       numberTask: 57,
       color: "#9370DB",
     },
     {
-      imgUrl:
-        "https://www.shareicon.net/download/2015/12/13/686652_clipboard_512x512.png",
+      imgUrl: Clipboard,
       heading: "Completed",
       paragraph: "Tasks",
       numberTask: 1425,
@@ -31,11 +34,7 @@ const Tasks = () => {
   return (
     <>
       <div className="firstDiv">
-        <img
-          className="imgHeadCss"
-          src="https://cdn-icons-png.freepik.com/512/65/65608.png"
-          alt="icon"
-        />
+        <img className="imgHeadCss" src={TaskIcon} alt="icon" />
         <p className="taskStatusCss">My Tasks Stats</p>
       </div>
       <div className="tasksCss">
