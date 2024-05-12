@@ -1,15 +1,3 @@
-/* .pokemons_list {
-  width: 100%;
-  max-width: 1300px;
-  margin-top: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  justify-items: center;
-  gap: 30px;
-} */
-
 .pokemons_list {
   list-style-type: none;
   display: grid;

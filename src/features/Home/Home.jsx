@@ -1,5 +1,5 @@
-
 import { useClicksStore } from "../../stores/clicks/clicks.store";
+import "./Home.css";
 
 const Home = () => {
   const { decrementNumberOfClicks } = useClicksStore();
@@ -7,12 +7,11 @@ const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      <p>Welcome to our site!</p>
-      <p>We are here to help in any way we can!</p>
-      <button onClick={() => decrementNumberOfClicks()}>
+      <p>Welcome to my site!</p>
+      <p>I am here to help in any way i can!</p>
+      <button className="button" onClick={() => decrementNumberOfClicks()}>
         Remove click from Clicks
       </button>
-
     </>
   );
 };

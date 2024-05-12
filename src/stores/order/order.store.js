@@ -3,7 +3,7 @@ import { create } from "zustand";
 export const useOrderStore = create((set) => ({
   order: [],
   // addItemToOrderCart: (newItem) =>
-  //   set((state) => ({ orders: [...state.orders, newItem] })), // Append the new item to the cart array
+  //   set((state) => ({ orders: [...state.orders, newItem] })),
   addItemToOrderCart: (newItem) =>
     set((state) => {
       const existingItem = state.order.find((item) => item.id === newItem.id);
@@ -28,11 +28,11 @@ export const useOrderStore = create((set) => ({
           ],
         };
       }
-    }), // Append the new item to the cart array
+    }),
   removeItemFromOrderCart: (itemId) =>
     set((state) => ({
       order: state.order.filter((item) => item.id !== itemId),
-    })), // Remove the item from the cart array by filtering out the item with the given ID
+    })),
   clearOrderCart: () => set({ order: [] }),
 
   incrementNumberOfOrder: (itemId) =>

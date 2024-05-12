@@ -9,7 +9,7 @@ const Users = () => {
       name: "Anastasija",
       age: 23,
       city: "Doboj",
-      email: "anastasijas101@gmail.com",
+      email: "anastasijas@gmail.com",
       imageUrl:
         "https://static.vecteezy.com/system/resources/thumbnails/021/610/077/small_2x/young-latin-woman-is-winking-avatar-portrait-human-emotions-playful-funny-support-female-flat-style-free-vector.jpg",
     },
@@ -17,7 +17,7 @@ const Users = () => {
       name: "Tatjana",
       age: 23,
       city: "Teslic",
-      email: "tatjanajovicic@gmail.com",
+      email: "tatjanajovicic19@gmail.com",
       imageUrl:
         "https://static.vecteezy.com/system/resources/thumbnails/020/271/580/small_2x/portrait-of-a-young-blond-woman-full-face-portrait-in-flat-style-avatar-female-diversity-free-vector.jpg",
     },

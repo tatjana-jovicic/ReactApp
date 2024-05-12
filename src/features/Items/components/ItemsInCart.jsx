@@ -26,7 +26,7 @@ const ItemsInCart = () => {
   );
 
   const handleOrder = () => {
-    // Here you can implement the logic to send the order to the backend
+    // Here can implement the logic to send the order to the backend
     // and clear the cart
     clearOrderCart();
     setIsSuccessOrder(true);
@@ -37,7 +37,7 @@ const ItemsInCart = () => {
 
   const itemTotalPrice = (item) => {
     const totalItemPrice = item.price * item.quantity;
-    return totalItemPrice.toFixed(2); //js f-ja koja zaokruzi da dvije decimale
+    return totalItemPrice.toFixed(2);
   };
 
   const removeItem = (id) => {

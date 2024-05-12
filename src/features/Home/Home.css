@@ -1,0 +1,13 @@
+.button {
+  background: transparent;
+  background-color: rgb(158, 198, 212);
+  color: white;
+  border: 1px solid rgb(158, 198, 212);
+  margin-left: 5px;
+}
+.button:hover {
+  background-color: transparent;
+
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+}

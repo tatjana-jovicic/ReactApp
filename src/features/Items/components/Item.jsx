@@ -7,9 +7,9 @@ const Item = ({ item }) => {
   const [open, setOpen] = useState(false);
   const { addItemToOrderCart } = useOrderStore();
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  // const handleClick = () => {
+  //   setOpen(true);
+  // };
 
   const handleAddItem = (item) => {
     const AddItem = {

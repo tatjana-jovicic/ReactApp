@@ -16,15 +16,15 @@ export const usePokemonStore = create((set) => ({
     },
     {
       id: 3,
-      title: "Blastoise",
-      image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full//009.png",
-      description: "Bug",
+      title: "Seahorse",
+      image: "https://pngimg.com/d/seahorse_PNG6.png",
+      description: "Water",
     },
     {
       id: 4,
       title: "Butterfree",
       image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full//012.png",
-      description: "Bug, Flying",
+      description: "Flying",
     },
     {
       id: 5,
